@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import { useDispatch} from "react-redux";
 
 import { postData, getData } from "../store/actions";
 
 function SmurfForm() {
   const [newSmurf, setNewSmurf] = useState({});
-
+ const dispatch = useDispatch();
   const isPosting = dispatch(state => state.isPosting);
 
   const handleChange = e => {
